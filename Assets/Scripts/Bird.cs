@@ -28,7 +28,7 @@ public class Bird : MonoBehaviour
 
     private void OnMouseDown()
     {
-        _sr.color = Color.red;
+        _sr.color = Color.red; 
     }
     private void OnMouseUp()
     {
@@ -37,14 +37,14 @@ public class Bird : MonoBehaviour
         direction.Normalize();
 
         _myBody.isKinematic = false;
-        _myBody.AddForce(direction * _launchForce);
+        _myBody.AddForce(direction * _launchForce); 
 
         _sr.color = Color.white;
     }
     private void OnMouseDrag()
     {
         Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        transform.position = new Vector3(mousePosition.x, mousePosition.y, transform.position.z);
+        transform.position = new Vector3(mousePosition.x, mousePosition.y, transform.position.z); //changing position of bird to dragged point
     }
 
     // Update is called once per frame

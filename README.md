@@ -1,3 +1,4 @@
 # Angry Birds
+<img src="img/angry-birds-1.jpg" alt="birds" style="width:200px;"/>
 
-Bulit using Unity Game Engine.
+Bulit with Unity Game Engine.

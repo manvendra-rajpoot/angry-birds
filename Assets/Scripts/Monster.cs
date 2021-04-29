@@ -11,20 +11,29 @@ public class Monster : MonoBehaviour
             onSpotDeath();
         }
     }
+
     private bool isDirectCollision(Collision2D collision)
     {
         Bird bird = collision.gameObject.GetComponent<Bird>();
 
+        //get by bird
         if(bird != null)
         {
             return true;
         }
+        
+        //hit by vertical falling crate
+        if(collision.contacts[0].normal.y < -0.5)
+        {
+            return true;
+        }
+
         return false;
     }
 
     private void onSpotDeath()
     {
-        gameObject.SetActive(false);
+        gameObject.SetActive(false); //disappear from gameplay
     }
 
 
