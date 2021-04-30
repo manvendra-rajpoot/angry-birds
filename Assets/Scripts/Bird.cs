@@ -10,7 +10,7 @@ public class Bird : MonoBehaviour
     private Vector2 _startPosition;
 
     [SerializeField]
-    private float _launchForce = 555;
+    private float _launchForce = 666f, _maxDragDistance = 5f;
 
     //Awake is called only once during the lifetime of the script instance.
     private void Awake()
@@ -44,7 +44,26 @@ public class Bird : MonoBehaviour
     private void OnMouseDrag()
     {
         Vector3 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        transform.position = new Vector3(mousePosition.x, mousePosition.y, transform.position.z); //changing position of bird to dragged point
+
+        Vector2 desiredPosition = mousePosition;
+
+        float distance = Vector2.Distance(desiredPosition, _startPosition);
+
+        // restricting bird to an arc of _maxDragDist
+        if (distance > _maxDragDistance)
+        {
+            Vector2 direction = desiredPosition - _startPosition;
+            direction.Normalize();
+            desiredPosition = _startPosition + (direction * _maxDragDistance);
+        }
+
+        //restricting drag of bird to left only
+        if (desiredPosition.x > _startPosition.x)
+        {
+            desiredPosition.x = _startPosition.x;
+        }
+
+        _myBody.position = desiredPosition;
     }
 
     // Update is called once per frame
