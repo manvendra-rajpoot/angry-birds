@@ -6,17 +6,19 @@ public class Bird : MonoBehaviour
 {
     private Rigidbody2D _myBody;
     private SpriteRenderer _sr;
-    
+    private LineRenderer _lr;
+
     private Vector2 _startPosition;
 
     [SerializeField]
-    private float _launchForce = 666f, _maxDragDistance = 5f;
+    private float _launchForce = 700f, _maxDragDistance = 5f;
 
     //Awake is called only once during the lifetime of the script instance.
     private void Awake()
     {
         _myBody = GetComponent<Rigidbody2D>();
         _sr = GetComponent<SpriteRenderer>();
+        _lr = GetComponent<LineRenderer>();
     }
 
     // Start is called before the first frame update
@@ -28,7 +30,8 @@ public class Bird : MonoBehaviour
 
     private void OnMouseDown()
     {
-        _sr.color = Color.red; 
+        _sr.color = Color.red;
+        _lr.enabled = true;
     }
     private void OnMouseUp()
     {
@@ -40,6 +43,7 @@ public class Bird : MonoBehaviour
         _myBody.AddForce(direction * _launchForce); 
 
         _sr.color = Color.white;
+        _lr.enabled = false;
     }
     private void OnMouseDrag()
     {
@@ -58,12 +62,15 @@ public class Bird : MonoBehaviour
         }
 
         //restricting drag of bird to left only
-        if (desiredPosition.x > _startPosition.x)
+        /*if (desiredPosition.x > _startPosition.x)
         {
             desiredPosition.x = _startPosition.x;
-        }
+        }*/
 
         _myBody.position = desiredPosition;
+        
+        _lr.SetPosition(1, _startPosition);
+        _lr.SetPosition(0, _myBody.position);
     }
 
     // Update is called once per frame

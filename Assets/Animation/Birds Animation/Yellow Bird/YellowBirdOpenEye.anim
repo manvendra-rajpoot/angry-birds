@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: RedBirdOpenEye
+  m_Name: YellowBirdOpenEye
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -20,13 +20,13 @@ AnimationClip:
   m_PPtrCurves:
   - curve:
     - time: 0
-      value: {fileID: 21300000, guid: 354e3b168c253dd4fb6a80ed1dad7358, type: 3}
+      value: {fileID: 21300000, guid: cf4e889597e7b0849948c69934f4634f, type: 3}
     - time: 0.083333336
-      value: {fileID: 21300000, guid: bbafdc812f598d145bc33ae722fc38fc, type: 3}
+      value: {fileID: 21300000, guid: b4c7763b3c61dd746896f98bb5e79818, type: 3}
     - time: 0.16666667
-      value: {fileID: 21300000, guid: 354e3b168c253dd4fb6a80ed1dad7358, type: 3}
+      value: {fileID: 21300000, guid: 4129b8908656e8d48963f825f890f669, type: 3}
     - time: 0.25
-      value: {fileID: 21300000, guid: 0fa51d39f6960854fb7882c09580546e, type: 3}
+      value: {fileID: 21300000, guid: 373f5089d6c0ea3489bb658408419c22, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
@@ -46,10 +46,10 @@ AnimationClip:
       customType: 23
       isPPtrCurve: 1
     pptrCurveMapping:
-    - {fileID: 21300000, guid: 354e3b168c253dd4fb6a80ed1dad7358, type: 3}
-    - {fileID: 21300000, guid: bbafdc812f598d145bc33ae722fc38fc, type: 3}
-    - {fileID: 21300000, guid: 354e3b168c253dd4fb6a80ed1dad7358, type: 3}
-    - {fileID: 21300000, guid: 0fa51d39f6960854fb7882c09580546e, type: 3}
+    - {fileID: 21300000, guid: cf4e889597e7b0849948c69934f4634f, type: 3}
+    - {fileID: 21300000, guid: b4c7763b3c61dd746896f98bb5e79818, type: 3}
+    - {fileID: 21300000, guid: 4129b8908656e8d48963f825f890f669, type: 3}
+    - {fileID: 21300000, guid: 373f5089d6c0ea3489bb658408419c22, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
