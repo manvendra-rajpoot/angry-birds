@@ -139,7 +139,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb82d269b5435da42b56134b207e8cd5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _launchForce: 655
+  _launchForce: 800
   _maxDragDistance: 5
 --- !u!60 &6223244947700837434
 PolygonCollider2D:

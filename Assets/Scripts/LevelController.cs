@@ -9,7 +9,7 @@ public class LevelController : MonoBehaviour
     Monster[] _monsters;
     
     [SerializeField]
-    private string _nextLevelName;
+    public string _nextLevelName;
 
     private void OnEnable()
     {
